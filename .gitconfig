@@ -1,0 +1,12 @@
+[user]
+	email = hunter.dding@gmail.com
+	name = zhang-ning
+[alias]
+	co = checkout
+	ci = commit -av
+	st = status
+	br = branch
+[core]
+	editor = vim
+[push]
+	default = matching
