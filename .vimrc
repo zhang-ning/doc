@@ -1,0 +1,123 @@
+set nocompatible              " be iMproved
+filetype off                  " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My bundles here:
+"
+" original repos on GitHub
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" non-GitHub repos
+Bundle 'git://git.wincent.com/command-t.git'
+
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+" has too many bug
+"Bundle 'fholgado/minibufexpl.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'endel/vim-github-colorscheme'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'Shutnik/jshint2.vim'
+Bundle 'mattn/emmet-vim'
+
+"snipmates
+Bundle 'SirVer/ultisnips'
+"Bundle "MarcWeber/vim-addon-mw-utils"
+"Bundle "tomtom/tlib_vim"
+"Bundle "garbas/vim-snipmate"
+
+" Ctrlp:
+Bundle "kien/ctrlp.vim"
+
+" Optional:
+Bundle "honza/vim-snippets"
+
+filetype plugin indent on     " required!
+
+
+" Disable swapfile and backup {{{
+set nobackup
+set noswapfile
+
+"remap leader key{{{
+let mapleader=','
+
+"set completeopt-=preview
+set autoindent
+set tabstop=2 " tab width is 4 spaces
+set shiftwidth=2     "
+set softtabstop=2
+set expandtab
+set textwidth=300
+set t_Co=256
+set number
+set hidden
+set showmatch
+set autoread
+set title
+set ruler
+syntax on
+set incsearch
+set hls
+set laststatus=2
+set encoding=utf-8
+set wildmenu
+"set tags+=./tags
+
+
+colorscheme solarized
+set background=dark
+if has('gui_running')
+"  colorscheme github
+  set background=light
+else
+  set background=dark
+endif
+
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=l
+
+"NERDTree:
+nmap <F2> :NERDTreeToggle <cr>
+
+"Fufzfinder:
+"nmap <leader>f :FufCoverageFile <cr>
+"let g:fuf_coveragefile_globPatterns = ['**/*.js', '**/*.css','**/*.html','**/*.svg']
+let g:fuf_coveragefile_exclude = '\v\~$|node_modules$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
+
+"CtrlP:
+let g:ctrlp_map = '<leader>f'
+
+set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+
+
+
+"open Github
+nmap <leader>g :cd ~/Github <cr>
+"open vimrc
+nmap <leader>v :e ~/.vimrc <cr>
+
+"tab to turn next buffer
+nmap <tab> :bn <cr>
+nmap <s-tab> :bp <cr>
