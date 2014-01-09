@@ -100,6 +100,7 @@ nmap <F2> :NERDTreeToggle <cr>
 
 "CtrlP:
 let g:ctrlp_map = '<leader>f'
+let g:ctrlp_working_path_mode = 'c'
 
 set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
