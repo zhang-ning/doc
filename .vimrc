@@ -41,11 +41,12 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 
 Bundle "godlygeek/tabular"
-
-" Optional:
 Bundle "honza/vim-snippets"
 Bundle "pangloss/vim-javascript"
+Bundle "jamescarr/snipmate-nodejs"
 Bundle "moll/vim-node"
+" Ctrlp:
+Bundle "kien/ctrlp.vim"
 
 "自动检测文件类型并加载相应的设置
 filetype plugin indent on     " required!
@@ -55,8 +56,6 @@ filetype plugin indent on     " required!
 set smartindent
 
 
-" Ctrlp:
-Bundle "kien/ctrlp.vim"
 
 " Disable swapfile and backup {{{
 set nobackup
