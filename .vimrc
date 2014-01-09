@@ -33,22 +33,16 @@ Bundle 'mattn/emmet-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'maksimr/vim-jsbeautify'
+"ultisnips
+Bundle 'SirVer/ultisnips'
 
 filetype plugin indent on     " required!
-filetype indent on
 "set cindent shiftwidth=2
 
-"snipmates
-Bundle 'SirVer/ultisnips'
-"Bundle "MarcWeber/vim-addon-mw-utils"
-"Bundle "tomtom/tlib_vim"
-"Bundle "garbas/vim-snipmate"
 
 " Ctrlp:
 Bundle "kien/ctrlp.vim"
 
-" Optional:
-"Bundle "honza/vim-snippets"
 
 filetype plugin indent on     " required!
 
@@ -96,12 +90,10 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=l
 
-"mapping
-nmap <F2> :NERDTreeToggle <cr>
 "Fuffinder
 "nmap <leader>f :FufCoverageFile <cr>
-let g:fuf_coveragefile_globPatterns = ['**/*.js', '**/*.html','**/*.css','**/*.json','**/*.md']
-let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|node_modules'
+"let g:fuf_coveragefile_globPatterns = ['**/*.js', '**/*.html','**/*.css','**/*.json','**/*.md']
+"let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|node_modules'
 
 "NERDTree:
 nmap <F2> :NERDTreeToggle <cr>
@@ -118,8 +110,6 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
-nmap <leader>v :e ~/.vimrc <cr>
-nmap <leader>s :so ~/.vimrc <cr>
 
 "youcompleteme tab issue with ultisnips
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -127,11 +117,9 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 
-"open Github
-nmap <leader>g :cd ~/Github <cr>
-"open vimrc
-nmap <leader>v :e ~/.vimrc <cr>
+"custome mapping
 
-"tab to turn next buffer
 nmap <tab> :bn <cr>
 nmap <s-tab> :bp <cr>
+nmap <leader>v :e ~/.vimrc <cr>
+nmap <leader>s :so ~/.vimrc <cr>
