@@ -4,7 +4,7 @@ filetype off                  " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-"let Vundle manage Vundle
+" let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
 
@@ -37,7 +37,21 @@ Bundle 'maksimr/vim-jsbeautify'
 
 filetype plugin indent on     " required!
 filetype indent on
-set cindent shiftwidth=2
+"set cindent shiftwidth=2
+
+"snipmates
+Bundle 'SirVer/ultisnips'
+"Bundle "MarcWeber/vim-addon-mw-utils"
+"Bundle "tomtom/tlib_vim"
+"Bundle "garbas/vim-snipmate"
+
+" Ctrlp:
+Bundle "kien/ctrlp.vim"
+
+" Optional:
+Bundle "honza/vim-snippets"
+
+filetype plugin indent on     " required!
 
 
 " Disable swapfile and backup {{{
@@ -95,15 +109,26 @@ nmap <leader>f :CtrlP <cr>
 
 set wildignore+=*/node_modules/*,*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
+"NERDTree:
+nmap <F2> :NERDTreeToggle <cr>
+
+"Fufzfinder:
+"nmap <leader>f :FufCoverageFile <cr>
+"let g:fuf_coveragefile_globPatterns = ['**/*.js', '**/*.css','**/*.html','**/*.svg']
+let g:fuf_coveragefile_exclude = '\v\~$|node_modules$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
+
+"CtrlP:
+let g:ctrlp_map = '<leader>f'
+
+set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
-"tab to next buffer
-"nmap <tab> :bn <cr>
-"nmap <s-tab> :bp <cr>
 nmap <leader>v :e ~/.vimrc <cr>
 nmap <leader>s :so ~/.vimrc <cr>
 
@@ -111,3 +136,13 @@ nmap <leader>s :so ~/.vimrc <cr>
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+
+"open Github
+nmap <leader>g :cd ~/Github <cr>
+"open vimrc
+nmap <leader>v :e ~/.vimrc <cr>
+
+"tab to turn next buffer
+nmap <tab> :bn <cr>
+nmap <s-tab> :bp <cr>

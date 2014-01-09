@@ -12,3 +12,5 @@
 	tool = vimdiff
 [difftool]
 	prompt = No
+[core]
+	editor = vim
