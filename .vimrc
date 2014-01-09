@@ -32,7 +32,6 @@ Bundle 'Shutnik/jshint2.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'SirVer/ultisnips'
 Bundle 'maksimr/vim-jsbeautify'
 
 filetype plugin indent on     " required!
@@ -49,7 +48,7 @@ Bundle 'SirVer/ultisnips'
 Bundle "kien/ctrlp.vim"
 
 " Optional:
-Bundle "honza/vim-snippets"
+"Bundle "honza/vim-snippets"
 
 filetype plugin indent on     " required!
 
@@ -103,19 +102,9 @@ nmap <F2> :NERDTreeToggle <cr>
 "nmap <leader>f :FufCoverageFile <cr>
 let g:fuf_coveragefile_globPatterns = ['**/*.js', '**/*.html','**/*.css','**/*.json','**/*.md']
 let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|node_modules'
-"ctrlp
-"let g:ctrlp_map = ',f'
-nmap <leader>f :CtrlP <cr>
-
-set wildignore+=*/node_modules/*,*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 "NERDTree:
 nmap <F2> :NERDTreeToggle <cr>
-
-"Fufzfinder:
-"nmap <leader>f :FufCoverageFile <cr>
-"let g:fuf_coveragefile_globPatterns = ['**/*.js', '**/*.css','**/*.html','**/*.svg']
-let g:fuf_coveragefile_exclude = '\v\~$|node_modules$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
 
 "CtrlP:
 let g:ctrlp_map = '<leader>f'
