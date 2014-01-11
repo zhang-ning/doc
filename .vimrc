@@ -113,9 +113,9 @@ nmap <F2> :NERDTreeToggle <cr>
 
 "CtrlP:
 let g:ctrlp_map = '<leader>f'
-let g:ctrlp_working_path_mode = 'c'
+"let g:ctrlp_working_path_mode = 'c'
 
-set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
@@ -126,10 +126,10 @@ let g:ctrlp_custom_ignore = {
 
 "Tabularize
 if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:<CR>
-  vmap <Leader>a: :Tabularize /:<CR>
+  nmap <leader>a= :Tabularize /=<CR>
+  vmap <leader>a= :Tabularize /=<CR>
+  nmap <leader>a: :Tabularize /:<CR>
+  vmap <leader>a: :Tabularize /:<CR>
 endif
 
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
