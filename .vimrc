@@ -115,7 +115,7 @@ nmap <F2> :NERDTreeToggle <cr>
 let g:ctrlp_map = '<leader>f'
 "let g:ctrlp_working_path_mode = 'c'
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
