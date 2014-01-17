@@ -121,4 +121,4 @@ if ! shopt -oq posix; then
 fi
 
 
-PS1='  ♘  \W: '
+PS1='  ♫  \W: '
