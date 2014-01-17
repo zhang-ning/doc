@@ -34,14 +34,14 @@ Bundle 'kien/ctrlp.vim'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'maksimr/vim-jsbeautify'
 "ultisnips
-"Bundle 'SirVer/ultisnips'
+Bundle 'SirVer/ultisnips'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+"Bundle "garbas/vim-snipmate"
 
 Bundle "godlygeek/tabular"
-Bundle "honza/vim-snippets"
+"Bundle "honza/vim-snippets"
 Bundle "pangloss/vim-javascript"
 Bundle "jamescarr/snipmate-nodejs"
 Bundle "moll/vim-node"
@@ -153,6 +153,7 @@ endfunction
 
 
 "custome mapping
+"let g:UltiSnips = {}
 
 nmap <tab> :bn <cr>
 nmap <s-tab> :bp <cr>
