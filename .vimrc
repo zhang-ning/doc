@@ -91,11 +91,10 @@ set tags+=./tags
 set ignorecase
 
 colorscheme solarized
-set background=dark
 if has('gui_running')
   set background=light
 else
-  set background=dark
+  set background=light
 endif
 
 set guioptions-=m
