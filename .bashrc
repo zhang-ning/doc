@@ -3,6 +3,7 @@
 # for examples
 export PATH=~/Apps:$PATH;
 alias gvim="gvim -f 2>/dev/null"
+alias open="see"
 # for tmux
 export TERM="screen-256color"
 alias tmux="tmux -2"
