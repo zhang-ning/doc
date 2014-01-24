@@ -93,7 +93,7 @@ set ignorecase
 
 colorscheme solarized
 if has('gui_running')
-  set background=light
+  set background=dark
 else
   set background=light
 endif
