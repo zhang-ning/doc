@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 export PATH=~/Apps:$PATH;
-alias g="gvim -f 2>/dev/null"
+alias g="gvim -f & 2>/dev/null "
 alias open="see"
 # for tmux
 export TERM="screen-256color"
