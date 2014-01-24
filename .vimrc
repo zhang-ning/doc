@@ -95,7 +95,7 @@ colorscheme solarized
 if has('gui_running')
   set background=dark
 else
-  set background=light
+  set background=dark
 endif
 
 set guioptions-=m
