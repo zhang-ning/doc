@@ -47,6 +47,7 @@ Bundle "jamescarr/snipmate-nodejs"
 Bundle "moll/vim-node"
 " Ctrlp:
 Bundle "kien/ctrlp.vim"
+Bundle "tomasr/molokai"
 
 "自动检测文件类型并加载相应的设置
 filetype plugin indent on     " required!
