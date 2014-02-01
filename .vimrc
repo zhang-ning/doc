@@ -38,12 +38,9 @@ Bundle 'SirVer/ultisnips'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-"Bundle "garbas/vim-snipmate"
 
 Bundle "godlygeek/tabular"
-"Bundle "honza/vim-snippets"
 Bundle "pangloss/vim-javascript"
-Bundle "jamescarr/snipmate-nodejs"
 Bundle "moll/vim-node"
 " Ctrlp:
 Bundle "kien/ctrlp.vim"
@@ -151,17 +148,15 @@ endfunction
 
 
 
-"youcompleteme tab issue with ultisnips
-"let g:UltiSnipsExpandTrigger="<c-j>"
-"let g:UltiSnipsJumpForwardTrigger="<c-j>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
+"UltiSnips setting
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-"custome mapping
-"let g:UltiSnips = {}
-
-nmap <tab> :bn <cr>
-nmap <s-tab> :bp <cr>
+nmap <leader>n :bn <cr>
+nmap <leader>p :bp <cr>
 nmap <leader>v :e ~/.vimrc <cr>
 noremap <silent><Leader>/ :nohls<CR>
 
