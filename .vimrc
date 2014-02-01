@@ -54,6 +54,9 @@ Bundle "tpope/vim-surround"
 "youcompleteme
 Bundle  'Valloric/YouCompleteMe'
 
+"tern_for_vim
+Bundle 'marijnh/tern_for_vim'
+
 "taghighlight
 Bundle "magic-dot-files/TagHighlight"
 
