@@ -31,7 +31,6 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Shutnik/jshint2.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'kien/ctrlp.vim'
-"Bundle 'Valloric/YouCompleteMe'
 Bundle 'maksimr/vim-jsbeautify'
 "ultisnips
 Bundle 'SirVer/ultisnips'
@@ -41,14 +40,22 @@ Bundle "tomtom/tlib_vim"
 
 Bundle "godlygeek/tabular"
 Bundle "pangloss/vim-javascript"
-Bundle "moll/vim-node"
+"Bundle "moll/vim-node"
 " Ctrlp:
 Bundle "kien/ctrlp.vim"
 Bundle "tomasr/molokai"
-Bundle "ahayman/vim-nodejs-complete"
 
 "SingleCompile
 Bundle "vim-scripts/SingleCompile"
+
+"surround
+Bundle "tpope/vim-surround"
+
+"youcompleteme
+Bundle  'Valloric/YouCompleteMe'
+
+"taghighlight
+Bundle "magic-dot-files/TagHighlight"
 
 "自动检测文件类型并加载相应的设置
 filetype plugin indent on     " required!
@@ -66,7 +73,6 @@ set noswapfile
 "remap leader key{{{
 let mapleader=','
 
-"set completeopt-=preview
 "自动缩进
 set autoindent
 "一个tab是2个字符
@@ -163,6 +169,18 @@ nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
 
 
+"""""""""""syntastic"""""
+"set error or warning signs
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '☢ '
+
+""""""""""""YCM""""""""""""""'
+"change you complete me plugin default mappings"{{{
+""refer to this blog post :http://0x3f.org/blog/make-youcompleteme-ultisnips-compatible/
+let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-Tab>'
+
 nmap <leader>n :bn <cr>
 nmap <leader>p :bp <cr>
 nmap <leader>v :e ~/.vimrc <cr>
@@ -175,5 +193,7 @@ set dictionary+=/usr/share/dict/words
 map ,ss :setlocal spell!<cr>
 
 
+
+
 "autocommand for vim-node
-autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
+"autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
