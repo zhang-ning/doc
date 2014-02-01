@@ -48,6 +48,7 @@ Bundle "moll/vim-node"
 " Ctrlp:
 Bundle "kien/ctrlp.vim"
 Bundle "tomasr/molokai"
+Bundle "ahayman/vim-nodejs-complete"
 
 "自动检测文件类型并加载相应的设置
 filetype plugin indent on     " required!
@@ -102,6 +103,9 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=l
+
+
+set path=~/Documents/first
 
 "Fuffinder
 "nmap <leader>f :FufCoverageFile <cr>
@@ -159,7 +163,13 @@ endfunction
 nmap <tab> :bn <cr>
 nmap <s-tab> :bp <cr>
 nmap <leader>v :e ~/.vimrc <cr>
-nmap <leader>s :so ~/.vimrc <cr>
+noremap <silent><Leader>/ :nohls<CR>
+
+" automatically reload vimrc when it's saved
+"au BufWritePost .vimrc so ~/.vimrc
+set dictionary+=/usr/share/dict/words
+"Pressing ,ss will toggle and untoggle spell checking
+map ,ss :setlocal spell!<cr>
 
 
 "autocommand for vim-node
