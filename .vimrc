@@ -47,6 +47,9 @@ Bundle "kien/ctrlp.vim"
 Bundle "tomasr/molokai"
 Bundle "ahayman/vim-nodejs-complete"
 
+"SingleCompile
+Bundle "vim-scripts/SingleCompile"
+
 "自动检测文件类型并加载相应的设置
 filetype plugin indent on     " required!
 "set cindent shiftwidth=2
@@ -154,6 +157,11 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+"SingleCompile setting
+nmap <F9> :SCCompile<cr>
+nmap <F10> :SCCompileRun<cr>
+
 
 nmap <leader>n :bn <cr>
 nmap <leader>p :bp <cr>
