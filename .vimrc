@@ -53,7 +53,7 @@ filetype plugin indent on     " required!
 
 "智能对齐方式
 set smartindent
-
+set cursorline cursorcolumn
 
 
 " Disable swapfile and backup {{{
