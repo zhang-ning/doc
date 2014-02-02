@@ -104,14 +104,14 @@ set ignorecase
 colorscheme solarized
 if has('gui_running')
   set background=dark
+  set guioptions-=m
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=l
 else
   set background=dark
 endif
 
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guioptions-=l
 
 
 set path=~/Documents/first
@@ -186,7 +186,7 @@ let g:SuperTabDefaultCompletionType = '<C-Tab>'
 
 nmap <leader>n :bn <cr>
 nmap <leader>p :bp <cr>
-nmap <leader>v :e ~/.vimrc <cr>
+nmap <leader>rc :e ~/.vimrc <cr>
 noremap <silent><Leader>/ :nohls<CR>
 
 " automatically reload vimrc when it's saved
