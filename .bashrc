@@ -7,6 +7,7 @@ alias open="see"
 # for tmux
 export TERM="screen-256color"
 alias tmux="tmux -2"
+alias t="tmux new-session -s"
 
 set -o vi
 

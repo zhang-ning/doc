@@ -258,13 +258,17 @@ nmap <s-tab> :bp <cr>
 nmap <leader>rc :e ~/.vimrc <cr>
 noremap <silent><Leader>/ :nohls<CR>
 
+"easy resize window resize with arrowkey  from www.vimbits.com 
+noremap <s-j> <c-w>+
+noremap <s-k> <c-w>-
+noremap <s-h> <c-w><
+noremap <s-l> <c-w>>
+
 " automatically reload vimrc when it's saved
 "au BufWritePost .vimrc so ~/.vimrc
 set dictionary+=/usr/share/dict/words
 "Pressing ,ss will toggle and untoggle spell checking
 map ,ss :setlocal spell!<cr>
-
-
 
 
 "autocommand for vim-node
