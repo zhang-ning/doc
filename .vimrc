@@ -74,6 +74,9 @@ Bundle "tomasr/molokai"
 "SingleCompile
 Bundle "vim-scripts/SingleCompile"
 
+"supertab
+Bundle "ervandew/supertab"
+
 "surround
 Bundle "tpope/vim-surround"
 
@@ -85,6 +88,12 @@ Bundle 'marijnh/tern_for_vim'
 
 "taghighlight
 Bundle "magic-dot-files/TagHighlight"
+
+"tmuxline
+Bundle "edkolev/tmuxline.vim"
+
+"tagbar
+Bundle "majutsushi/tagbar"
 
 "自动检测文件类型并加载相应的设置
 filetype plugin indent on     " required!
@@ -210,7 +219,14 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = '⮀'
 let g:airline#extensions#tabline#left_alt_sep = '⮁'
 
-
+"tmuxline settin
+let g:tmuxline_preset = 'full'
+let g:tmuxline_separators = {
+    \ 'left' : '⮀',
+    \ 'left_alt': '⮁',
+    \ 'right' : '⮂',
+    \ 'right_alt' : '⮃',
+    \ 'space' : ' '}
 
 
 "UltiSnips setting
