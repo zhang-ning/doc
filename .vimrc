@@ -239,6 +239,9 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
 
+"Quick start tarbar
+nmap <F8> :TagbarToggle<CR>
+
 
 """""""""""syntastic"""""
 "set error or warning signs
@@ -269,6 +272,9 @@ noremap <s-l> <c-w>>
 set dictionary+=/usr/share/dict/words
 "Pressing ,ss will toggle and untoggle spell checking
 map ,ss :setlocal spell!<cr>
+
+"Resize Vsplits on window resize
+au VimResized * exe "normal! \<c-w>="
 
 
 "autocommand for vim-node
