@@ -27,13 +27,39 @@ Bundle 'scrooloose/syntastic'
 "Bundle 'fholgado/minibufexpl.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'endel/vim-github-colorscheme'
-Bundle 'Lokaltog/vim-powerline'
+" as the aire line comes
+" Bundle 'Lokaltog/vim-powerline'
 Bundle 'Shutnik/jshint2.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'maksimr/vim-jsbeautify'
 "ultisnips
 Bundle 'SirVer/ultisnips'
+
+" Syntax // copyed from https://github.com/tlikai/dotfiles/blob/master/.vimrc
+Bundle 'groenewege/vim-less'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'tlikai/phpvim'
+Bundle 'othree/html5.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'markwu/vim-laravel4-snippets'
+Bundle 'xsbeats/vim-blade'
+" Syntax end
+
+" Misc copyed from https://github.com/tlikai/dotfiles/blob/master/.vimrc
+Bundle 'Shougo/unite.vim'
+Bundle 'bling/vim-airline'
+Bundle 'taglist.vim'
+Bundle 'matchit.zip'
+Bundle 'scrooloose/syntastic'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'stephpy/vim-php-cs-fixer'
+Bundle 'Yggdroot/indentLine'
+Bundle 'terryma/vim-expand-region'
+Bundle 'terryma/vim-multiple-cursors'
+" Mics end
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -101,6 +127,9 @@ set wildmenu
 set tags+=./tags
 set ignorecase
 
+"Style
+set t_Co=256
+set linespace=4
 colorscheme solarized
 if has('gui_running')
   set background=dark
@@ -158,6 +187,29 @@ function! s:align()
   endif
 endfunction
 
+"powerline setting
+let g:Powerline_symbols = 'fancy'
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+
+"airline setting
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" old vim-powerline symbols
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
+
+"airline: buf view
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = '⮀'
+let g:airline#extensions#tabline#left_alt_sep = '⮁'
+
 
 
 
@@ -177,6 +229,7 @@ nmap <F10> :SCCompileRun<cr>
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '☢ '
 
+
 """"""""""""YCM""""""""""""""'
 "change you complete me plugin default mappings"{{{
 ""refer to this blog post :http://0x3f.org/blog/make-youcompleteme-ultisnips-compatible/
@@ -184,8 +237,8 @@ let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-Tab>'
 
-nmap <leader>n :bn <cr>
-nmap <leader>p :bp <cr>
+nmap <tab> :bn <cr>
+nmap <s-tab> :bp <cr>
 nmap <leader>rc :e ~/.vimrc <cr>
 noremap <silent><Leader>/ :nohls<CR>
 
