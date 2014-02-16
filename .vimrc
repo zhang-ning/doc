@@ -54,7 +54,7 @@ Bundle 'bling/vim-airline'
 Bundle 'matchit.zip'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'stephpy/vim-php-cs-fixer'
-Bundle 'Yggdroot/indentLine'
+"Bundle 'Yggdroot/indentLine'
 Bundle 'terryma/vim-expand-region'
 Bundle 'terryma/vim-multiple-cursors'
 " Mics end

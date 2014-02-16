@@ -32,3 +32,15 @@ snippet @p "add params comonent" b
 @param:\{${1:String}\} ${2:name}
 $0
 endsnippet
+
+snippet desc "jasmin describe" b
+describe("${1:The CMD module define feature}", function() {
+	$0
+});
+endsnippet
+
+snippet before "jasmin before" b
+beforeEach(function(){
+	$0
+});
+endsnippet
